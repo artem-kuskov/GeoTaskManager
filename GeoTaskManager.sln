@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoTaskManager.Api", "GeoTaskManager.Api\GeoTaskManager.Api.csproj", "{14E85579-3F32-44EA-82CE-0C917FBBC11D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoTaskManager.MongoDb", "GeoTaskManager.MongoDb\GeoTaskManager.MongoDb.csproj", "{96CAD8D7-25C1-4BC0-BC45-052B682129EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoTaskManager.Application", "GeoTaskManager.Application\GeoTaskManager.Application.csproj", "{F2BE107D-C99D-44DD-A1A2-D7D7B98089F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoTaskManager.Api.Tests", "Test.GeoTaskManager.Api\GeoTaskManager.Api.Tests.csproj", "{05DC4B31-8011-4761-9DE3-84D01570952C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E85579-3F32-44EA-82CE-0C917FBBC11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E85579-3F32-44EA-82CE-0C917FBBC11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E85579-3F32-44EA-82CE-0C917FBBC11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E85579-3F32-44EA-82CE-0C917FBBC11D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CAD8D7-25C1-4BC0-BC45-052B682129EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CAD8D7-25C1-4BC0-BC45-052B682129EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CAD8D7-25C1-4BC0-BC45-052B682129EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CAD8D7-25C1-4BC0-BC45-052B682129EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BE107D-C99D-44DD-A1A2-D7D7B98089F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BE107D-C99D-44DD-A1A2-D7D7B98089F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BE107D-C99D-44DD-A1A2-D7D7B98089F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BE107D-C99D-44DD-A1A2-D7D7B98089F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05DC4B31-8011-4761-9DE3-84D01570952C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05DC4B31-8011-4761-9DE3-84D01570952C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05DC4B31-8011-4761-9DE3-84D01570952C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05DC4B31-8011-4761-9DE3-84D01570952C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BE269D-E66F-43AC-BE76-C2AFC6333288}
+	EndGlobalSection
+EndGlobal

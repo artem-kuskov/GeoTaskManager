@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GeoTaskManager.Api</name>
+    </assembly>
+    <members>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Get(System.String)">
+            <summary>
+            Gets specific Geo Task
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /tasks/get/1234567890123456789012345
+            </remarks>
+            <param name="id">Id of the entity</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Get(GeoTaskManager.Api.Models.ApiGetTaskAllRequest)">
+             <summary>
+             Gets filtered list of Geo Tasks
+             </summary>
+             <remarks>
+             Sample request:
+             
+                 GET /tasks/get?[parameters]
+             
+             <param name="request">
+             Available parameters:
+             
+             Offset (integer) - number of skipping element from the begining of list
+             
+             Limit (integer) - maximum number of returning elements. It could be limited by API service
+             
+             Archived (bool) - true returns only archived entities, false - only not archived entities, null - both archived and not archived entities
+             
+             ProjectId (string) - filter entities by project with this Id
+             
+             ActorId (string) - filter entities by actor with this Id
+             
+             ActorRoleMask (integer) - filter entities by ActorId's role in Geo Task.
+             
+                 0 - any role;
+                 1 - Creator;
+                 2 - Responsible;
+                 4 - Assistant;
+                 8 - Observer;
+                 or sum of several possible roles, ex. 6 for responsible or assistant role
+                 
+             TaskStatusMask (integer) - filter entities by Geo Task status.
+            
+                 0 - any status;
+                 1 - new;
+                 2 - in work;
+                 4 - finish requested;
+                 8 - finished;
+                 16 - cancel requested;
+                 32 - canceled;
+                 or sum of several possible statuses, ex. 48 for canceled or requsted for cancelization Geo Tasks
+                 
+             MaxTimeToDeadline (string) - maximum time lag from current time to planned finish time. It can be negative time.
+                 Example: 
+                 
+                     "6.20:20:10" returns Geo Tasks where the planned finish time was in the past or will be in the next 6 days 20 hours 20 minutes and 10 seconds
+                     "-6.20:20:10" returns Geo Tasks where the planned finish time was 6 days 20 hours 20 minutes and 10 seconds ago
+                     
+             ContainsKeyWords (string) - returns entities containing one or several words from the parameter in the Title or/and Description
+             </param>
+             </remarks>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Create(GeoTaskManager.Api.Models.ApiTaskCreateModel)">
+            <summary>
+            Add new Geo Task object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /tasks/create
+                {
+                    "Title": "New task title",
+                    "Description": "Detail info",
+                    "PlanStartAt": "2020-05-12T07:10:21.485Z",
+                    "PlanFinishAt": "2020-05-20T11:12:23Z",
+                    "ProjectId": "12345678901345678901234",
+                    "ResponsibleActorId": "00000000000000000000000",
+                    "AssistentActorsIds": 
+                        [
+                            "00000000000000000000000",
+                            "111111111111111111111111",
+                            "222222222222222222222222"
+                        ],
+                    "ObserverActorsIds": 
+                        [
+                            "00000000000000000000000",
+                            "111111111111111111111111"
+                        ],
+                    "GeosIds": 
+                        [
+                            "33333333333333333333333",
+                            "444444444444444444444444"
+                        ]
+                }
+            </remarks>
+            <param name="task">New entity</param>
+            <returns>GeoTask object</returns>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Patch(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{GeoTaskManager.Application.GeoTasks.Models.AppGeoTaskPatchModel})">
+            <summary>
+            Patch Geo Task object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PATCH /tasks/888888888888888888888888
+                {
+                    [
+                        { "op": "replace", "path": "/Title", "value": "New title" },
+                        { "op": "add", "path": "/AssistentActorsIds", "value": ["66666666666666666666666666"] },
+                        { "op": "remove", "path": "/Description"}
+                    ]
+                }
+            </remarks>
+            <param name="id">Id of patching Geo Task object</param>
+            <param name="patch">patch command for Geo Task object</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Update(System.String,GeoTaskManager.Api.Models.ApiTaskUpdateModel)">
+            <summary>
+            Update Geo Task object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /tasks/update/888888888888888888888888
+                {
+                    "Title": "Updated task title",
+                    "Description": "Updated Detail info",
+                    "PlanStartAt": "2020-05-12T07:10:21.485Z",
+                    "PlanFinishAt": "2020-05-20T07:10:21.485Z",
+                    "ProjectId": "12345678901345678901234",
+                    "ResponsibleActorId": "00000000000000000000000",
+                    "AssistentActorsIds": 
+                        [
+                            "00000000000000000000000",
+                            "111111111111111111111111",
+                            "222222222222222222222222"
+                        ],
+                    "ObserverActorsIds": 
+                        [
+                            "00000000000000000000000",
+                            "111111111111111111111111"
+                        ],
+                    "GeosIds": 
+                        [
+                            "33333333333333333333333",
+                            "444444444444444444444444"
+                        ]
+                }
+            </remarks>
+            <param name="id">Id of the entity</param>
+            <param name="task">Updated Geo Task object</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Delete(System.String)">
+            <summary>
+            Delete Geo Task object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                DELETE /tasks/888888888888888888888888
+            </remarks>
+            <param name="id">Id of the deleting entity</param>
+        </member>
+    </members>
+</doc>
