@@ -118,6 +118,11 @@ namespace GeoTaskManager.MongoDb.Geos.Handlers
                 query = query.Where(x => x.IsArchived == request.Archived);
             }
 
+            if (!string.IsNullOrWhiteSpace(request.ProjectId))
+            {
+                query = query.Where(x => x.ProjectId == request.ProjectId);
+            }
+
             // Add geospatial filter
             if (request.DistanceLat > 0 && request.DistanceLong > 0)
             {
