@@ -47,7 +47,9 @@ namespace GeoTaskManager.Api
             }
             else
             {
-                services.AddLogging();
+                services.AddLogging(logging =>
+                        logging.AddAzureWebAppDiagnostics()
+                               .AddConsole());
             }
 
 
