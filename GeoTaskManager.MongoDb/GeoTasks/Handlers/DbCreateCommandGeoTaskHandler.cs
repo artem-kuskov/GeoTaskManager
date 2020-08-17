@@ -59,7 +59,7 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Handlers
                     (Defaults.TaskCollectionName)
                         .InsertOneAsync(dbEntity)
                         .ConfigureAwait(false);
-                var newId = request.Entity?.Id;
+                var newId = dbEntity?.Id;
 
                 // Error while creating the entity
                 if (String.IsNullOrEmpty(newId))
