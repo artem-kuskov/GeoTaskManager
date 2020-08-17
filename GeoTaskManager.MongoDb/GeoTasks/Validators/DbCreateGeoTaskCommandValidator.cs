@@ -12,8 +12,9 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Validators
         public DbCreateGeoTaskCommandValidator()
         {
             RuleFor(x => x.Entity).NotNull();
-            RuleForEach(x => x.Entity.AssistentActors.Select(x => x.Id))
-                .IsObjectId()
+            RuleForEach(x => x.Entity.AssistentActors)
+                .ChildRules(actor => 
+                    actor.RuleFor(x => x.Id).IsObjectId())
                 .When(x => x.Entity != null);
             RuleFor(x => x.Entity.CreatedBy.Id)
                 .IsObjectId()
@@ -21,8 +22,9 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Validators
             RuleFor(x => x.Entity.ResponsibleActor.Id)
                 .IsObjectId()
                 .When(x => x.Entity?.ResponsibleActor != null);
-            RuleForEach(x => x.Entity.ObserverActors.Select(x => x.Id))
-                .IsObjectId()
+            RuleForEach(x => x.Entity.ObserverActors)
+                .ChildRules(actor => 
+                    actor.RuleFor(x => x.Id).IsObjectId())
                 .When(x => x.Entity != null);
         }
     }
