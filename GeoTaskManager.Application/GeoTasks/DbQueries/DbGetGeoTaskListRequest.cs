@@ -24,10 +24,10 @@ namespace GeoTaskManager.Application.GeoTasks.DbQueries
 
         public DbGetGeoTaskListRequest Copy()
         {
-            var copy = (DbGetGeoTaskListRequest)this.MemberwiseClone();
-            Actors.All(x => { copy.Actors.TryAdd(x.Key, x.Value); return true; });
-            ProjectIds.ForEach(x => copy.ProjectIds.Add(x));
-            GeoIds.ForEach(x => copy.GeoIds.Add(x));
+            var copy = (DbGetGeoTaskListRequest) MemberwiseClone();
+            copy.Actors = new Dictionary<string, int>(Actors);
+            copy.GeoIds = new List<string>(GeoIds);
+            copy.ProjectIds = new List<string>(ProjectIds);
             return copy;
         }
     }

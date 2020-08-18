@@ -1,7 +1,5 @@
-﻿using GeoTaskManager.Application.Core.DbCommands;
-using GeoTaskManager.Application.GeoTasks.Models;
+﻿using GeoTaskManager.Application.GeoTasks.Models;
 using GeoTaskManager.MongoDb.GeoTasks.Models;
-using MongoDB.Driver;
 using System.Linq;
 
 namespace GeoTaskManager.MongoDb.GeoTasks.Mappers
@@ -38,16 +36,6 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Mappers
                 (from.ObserverActors.Select(x => x.Id));
 
             return to;
-        }
-
-        public static DbCreateCommand<DbGeoTask>
-            ToDbCreateEntityCommandDbGeoTask
-                (this GeoTask from, IMongoDatabase db)
-        {
-            return new DbCreateCommand<DbGeoTask>
-            {
-                Entity = from.ToDbGeoTask()
-            };
         }
     }
 }

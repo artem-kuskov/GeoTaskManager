@@ -87,6 +87,7 @@ namespace GeoTaskManager.MongoDb
                     throw new MongoClientException
                         ("Get database error.");
                 }
+                Db = db;
             }
             catch (Exception e)
             {
@@ -98,7 +99,7 @@ namespace GeoTaskManager.MongoDb
 
             try
             {
-                await CreateSchemaAsync(db, client)
+                await CreateSchemaAsync()
                     .ConfigureAwait(false);
             }
             catch (Exception e)
@@ -108,15 +109,12 @@ namespace GeoTaskManager.MongoDb
                 throw new MongoClientException
                         ("Database Create Schema exception error.", e);
             }
-
-            Db = db;
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization",
             "CA1303:Do not pass literals as localized parameters",
             Justification = "<Pending>")]
-        private async Task CreateSchemaAsync
-            (IMongoDatabase db, IMongoClient client)
+        private async Task CreateSchemaAsync()
         {
             Logger.LogInformation(LogEvent.DatabaseInit,
                 "Database schema creation.");
@@ -168,18 +166,18 @@ namespace GeoTaskManager.MongoDb
                 cm.AutoMap();
             });
 
-            await CreateIndexes(db).ConfigureAwait(false);
+            await CreateIndexes().ConfigureAwait(false);
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization",
             "CA1303:Do not pass literals as localized parameters",
             Justification = "<Pending>")]
-        private async Task CreateIndexes(IMongoDatabase db)
+        private async Task CreateIndexes()
         {
             Logger.LogInformation(LogEvent.DatabaseInit,
                 "Database index creation.");
 
-            var actorCollection = db.GetCollection<Actor>
+            var actorCollection = Db.GetCollection<Actor>
                                     (Defaults.ActorCollectionName);
             var actorIndexBuilder = Builders<Actor>.IndexKeys;
             var actorIndexes = new List<CreateIndexModel<Actor>>
@@ -209,7 +207,7 @@ namespace GeoTaskManager.MongoDb
             await actorCollection.Indexes.CreateManyAsync(actorIndexes)
                 .ConfigureAwait(false);
 
-            var geoCollection = db.GetCollection<DbGeo>
+            var geoCollection = Db.GetCollection<DbGeo>
                                     (Defaults.GeoCollectionName);
             var geoIndexBuilder = Builders<DbGeo>.IndexKeys;
             var geoIndexes = new List<IndexKeysDefinition<DbGeo>>
@@ -227,7 +225,7 @@ namespace GeoTaskManager.MongoDb
             await geoCollection.Indexes.CreateManyAsync(geoIndexes)
                 .ConfigureAwait(false);
 
-            var projectCollection = db.GetCollection<Project>
+            var projectCollection = Db.GetCollection<Project>
                                         (Defaults.ProjectCollectionName);
             var projectIndexBuilder = Builders<Project>.IndexKeys;
             var projectIndexes = new List<IndexKeysDefinition<Project>>
@@ -248,7 +246,7 @@ namespace GeoTaskManager.MongoDb
                 .CreateManyAsync(projectIndexes)
                 .ConfigureAwait(false);
 
-            var taskCollection = db.GetCollection<DbGeoTask>
+            var taskCollection = Db.GetCollection<DbGeoTask>
                                     (Defaults.TaskCollectionName);
             var taskIndexBuilder = Builders<DbGeoTask>.IndexKeys;
             var taskIndexes = new List<IndexKeysDefinition<DbGeoTask>>

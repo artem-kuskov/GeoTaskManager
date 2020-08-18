@@ -71,10 +71,10 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Handlers
                 }
 
                 query = ApplyPagination(query, request);
-                var dbGeoList = await query
+                var dbGeoTaskList = await query
                     .ToListAsync()
                     .ConfigureAwait(false);
-                if (dbGeoList is null)
+                if (dbGeoTaskList is null)
                 {
                     Logger.LogWarning
                         (LogEvent.DatabaseEmptyResponse,
@@ -83,7 +83,7 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Handlers
                 }
 
                 var actorIdsSet = new HashSet<string>();
-                dbGeoList.ForEach
+                dbGeoTaskList.ForEach
                     (x =>
                         {
                             x.AssistentActorsIds
@@ -113,7 +113,7 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Handlers
                     Success = true,
                     TotalCount = totalCount
                 };
-                dbGeoList.ForEach(x =>
+                dbGeoTaskList.ForEach(x =>
                         result.Entities.Add(x.ToGeoTask(actors)));
 
                 return result;
