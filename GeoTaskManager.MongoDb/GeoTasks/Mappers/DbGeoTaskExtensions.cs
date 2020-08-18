@@ -48,6 +48,7 @@ namespace GeoTaskManager.MongoDb.GeoTasks.Mappers
             to.AssistentActors.AddRange(assistents);
             to.ObserverActors.AddRange(observers);
             to.History.AddRange(from.History);
+            to.GeosIds.AddRange(from.GeosIds);
             return to;
         }
     }
