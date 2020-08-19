@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "5ee8862e331ac14168f5e99c"
+  },
+  "Login": "a.kuskov@bk.ru",
+  "IsArchived": false,
+  "Title": null,
+  "Description": null,
+  "Department": null,
+  "FirstName": "Admin",
+  "LastName": null,
+  "Phone": null,
+  "EMail": "a.kuskov@bk.ru",
+  "Skype": null,
+  "CreatedAt": {
+    "$date": "2020-06-16T08:43:26.287Z"
+  },
+  "CreatedById": null,
+  "Role": {
+    "Name": "Admin",
+    "_id": 1
+  }
+}]

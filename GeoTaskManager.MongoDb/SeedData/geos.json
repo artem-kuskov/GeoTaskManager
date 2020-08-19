@@ -1,0 +1,565 @@
+[{
+  "_id": {
+    "$oid": "5f3ab24196464e955096ca87"
+  },
+  "IsArchived": false,
+  "Title": "SouthPort",
+  "Description": "Working territory",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:37:21.728Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                37.68688201904297,
+                55.6995014591531
+              ],
+              [
+                37.69683837890625,
+                55.697131333455005
+              ],
+              [
+                37.70138740539551,
+                55.698969402629004
+              ],
+              [
+                37.69014358520508,
+                55.704628178132104
+              ],
+              [
+                37.68679618835449,
+                55.70549868625661
+              ],
+              [
+                37.682504653930664,
+                55.70259691709397
+              ],
+              [
+                37.674522399902344,
+                55.70279037507501
+              ],
+              [
+                37.67435073852539,
+                55.701291050672815
+              ],
+              [
+                37.675466537475586,
+                55.70085575216929
+              ],
+              [
+                37.68482208251953,
+                55.69892103349493
+              ],
+              [
+                37.68679618835449,
+                55.69930798489143
+              ],
+              [
+                37.68688201904297,
+                55.6995014591531
+              ]
+            ]
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86"
+},{
+  "_id": {
+    "$oid": "5f3ab2d496464e955096ca88"
+  },
+  "IsArchived": false,
+  "Title": "Hospital",
+  "Description": "#53",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:39:48.173Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.67864227294922,
+            55.70172634432807
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86"
+},{
+  "_id": {
+    "$oid": "5f3ab37996464e955096ca89"
+  },
+  "IsArchived": false,
+  "Title": "Border",
+  "Description": "Pipeline",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:42:33.009Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.67864227294922,
+            55.70172634432807
+          ]
+        },
+        "properties": {}
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              37.68284797668457,
+              55.70254855244906
+            ],
+            [
+              37.682247161865234,
+              55.70119431809103
+            ],
+            [
+              37.68370628356933,
+              55.700710651590725
+            ],
+            [
+              37.68379211425781,
+              55.700178611527065
+            ],
+            [
+              37.68267631530762,
+              55.699259616176356
+            ],
+            [
+              37.68490791320801,
+              55.69892103349493
+            ]
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86"
+},{
+  "_id": {
+    "$oid": "5f3ab48496464e955096ca8a"
+  },
+  "IsArchived": false,
+  "Title": "Grass",
+  "Description": "",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:46:59.230Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                37.67911434173584,
+                55.70141196606339
+              ],
+              [
+                37.68327713012695,
+                55.70141196606339
+              ],
+              [
+                37.68327713012695,
+                55.70324983394191
+              ],
+              [
+                37.67911434173584,
+                55.70324983394191
+              ],
+              [
+                37.67911434173584,
+                55.70141196606339
+              ]
+            ]
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab03e96464e955096ca84"
+},{
+  "_id": {
+    "$oid": "5f3ab55096464e955096ca8b"
+  },
+  "IsArchived": false,
+  "Title": "PathToTheNearestMetrostation",
+  "Description": "",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:50:24.055Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              37.67889976501465,
+              55.70172634432807
+            ],
+            [
+              37.677998542785645,
+              55.7018472583719
+            ],
+            [
+              37.67812728881836,
+              55.702282545832226
+            ],
+            [
+              37.680487632751465,
+              55.70216163313513
+            ],
+            [
+              37.680573463439934,
+              55.70266946394908
+            ],
+            [
+              37.68293380737305,
+              55.70257273477898
+            ],
+            [
+              37.686710357666016,
+              55.705474505737214
+            ],
+            [
+              37.68503665924072,
+              55.70736054131602
+            ]
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab03e96464e955096ca84"
+},{
+  "_id": {
+    "$oid": "5f3ab63296464e955096ca8c"
+  },
+  "IsArchived": false,
+  "Title": "Streetlight 1-2",
+  "Description": "",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:54:10.948Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.677226066589355,
+            55.70266946394908
+          ]
+        },
+        "properties": {}
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.67881393432617,
+            55.70252437010415
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab07296464e955096ca85"
+},{
+  "_id": {
+    "$oid": "5f3ab67396464e955096ca8d"
+  },
+  "IsArchived": false,
+  "Title": "Streetlight 3-4",
+  "Description": "",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:55:15.150Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.68027305603027,
+            55.70279037507501
+          ]
+        },
+        "properties": {}
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.68113136291504,
+            55.70245182297971
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab07296464e955096ca85"
+},{
+  "_id": {
+    "$oid": "5f3ab6ab96464e955096ca8e"
+  },
+  "IsArchived": false,
+  "Title": "Streetlight 5-6",
+  "Description": "",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:56:11.019Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "GeoJson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.682247161865234,
+            55.70274201066954
+          ]
+        },
+        "properties": {}
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.68301963806152,
+            55.70259691709397
+          ]
+        },
+        "properties": {}
+      }
+    ]
+  },
+  "ProjectId": "5f3ab07296464e955096ca85"
+}]

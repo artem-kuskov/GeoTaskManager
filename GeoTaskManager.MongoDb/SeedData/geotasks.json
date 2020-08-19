@@ -1,0 +1,819 @@
+[{
+  "_id": {
+    "$oid": "5f3ad305363b76339061397f"
+  },
+  "IsArchived": false,
+  "Title": "Cut the grass",
+  "Description": "Do not use trimmers!",
+  "CreatedAt": {
+    "$date": "2020-08-17T18:57:08.290Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-08-18T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-08-19T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-17T18:57:08.290Z"
+  },
+  "ProjectId": "5f3ab03e96464e955096ca84",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "ObserverActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "GeosIds": [
+    "5f3ab48496464e955096ca8a"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-17T18:57:09.211Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "5ee8862e331ac14168f5e99c",
+              "CreatedAt": {
+                "$date": "2020-08-17T18:57:08.290Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Do not use trimmers!",
+              "GeosIds": "5f3ab48496464e955096ca8a",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "5ee8862e331ac14168f5e99c",
+              "PlanFinishAt": {
+                "$date": "2020-08-19T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-08-18T10:00:00Z"
+              },
+              "ProjectId": "5f3ab03e96464e955096ca84",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-17T18:57:08.290Z"
+              },
+              "Title": "Cut the grass"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3adae48b23bc791a6a29a4"
+  },
+  "IsArchived": false,
+  "Title": "Cut the grass",
+  "Description": "Do not use trimmers!",
+  "CreatedAt": {
+    "$date": "2020-08-17T19:30:43.168Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-08-18T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-08-19T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-17T19:30:43.168Z"
+  },
+  "ProjectId": "5f3ab03e96464e955096ca84",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "ObserverActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "GeosIds": [
+    "5f3ab48496464e955096ca8a"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-17T19:30:44.199Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "5ee8862e331ac14168f5e99c",
+              "CreatedAt": {
+                "$date": "2020-08-17T19:30:43.168Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Do not use trimmers!",
+              "GeosIds": "5f3ab48496464e955096ca8a",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "5ee8862e331ac14168f5e99c",
+              "PlanFinishAt": {
+                "$date": "2020-08-19T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-08-18T10:00:00Z"
+              },
+              "ProjectId": "5f3ab03e96464e955096ca84",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-17T19:30:43.168Z"
+              },
+              "Title": "Cut the grass"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3adbdc8b23bc791a6a29a5"
+  },
+  "IsArchived": false,
+  "Title": "Install signs along the path",
+  "Description": "Get design in Marketing Department",
+  "CreatedAt": {
+    "$date": "2020-08-17T19:34:51.868Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-08-20T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-08-27T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-17T19:34:51.868Z"
+  },
+  "ProjectId": "5f3ab03e96464e955096ca84",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "ObserverActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "GeosIds": [
+    "5f3ab55096464e955096ca8b"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-17T19:34:52.605Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "5ee8862e331ac14168f5e99c",
+              "CreatedAt": {
+                "$date": "2020-08-17T19:34:51.868Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Get design in Marketing Department",
+              "GeosIds": "5f3ab55096464e955096ca8b",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "5ee8862e331ac14168f5e99c",
+              "PlanFinishAt": {
+                "$date": "2020-08-27T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-08-20T10:00:00Z"
+              },
+              "ProjectId": "5f3ab03e96464e955096ca84",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-17T19:34:51.868Z"
+              },
+              "Title": "Install signs along the path"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3adcfe8b23bc791a6a29a6"
+  },
+  "IsArchived": false,
+  "Title": "Connect streetlights to the power grid",
+  "Description": "Check occupational safety!",
+  "CreatedAt": {
+    "$date": "2020-08-17T19:39:42.238Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-09-01T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-09-21T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-17T19:39:42.238Z"
+  },
+  "ProjectId": "5f3ab07296464e955096ca85",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "ObserverActorsIds": [
+    "5ee8862e331ac14168f5e99c"
+  ],
+  "GeosIds": [
+    "5f3ab63296464e955096ca8c",
+    "5f3ab67396464e955096ca8d",
+    "5f3ab6ab96464e955096ca8e"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-17T19:39:42.348Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "5ee8862e331ac14168f5e99c",
+              "CreatedAt": {
+                "$date": "2020-08-17T19:39:42.238Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Check occupational safety!",
+              "GeosIds": "5f3ab63296464e955096ca8c,5f3ab67396464e955096ca8d,5f3ab6ab96464e955096ca8e",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "5ee8862e331ac14168f5e99c",
+              "PlanFinishAt": {
+                "$date": "2020-09-21T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-09-01T10:00:00Z"
+              },
+              "ProjectId": "5f3ab07296464e955096ca85",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-17T19:39:42.238Z"
+              },
+              "Title": "Connect streetlights to the power grid"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3c1afc8b23bc791a6a29a7"
+  },
+  "IsArchived": false,
+  "Title": "Prepare the territory for landscaping works",
+  "Description": "Cut the grass, level the ground, mark the territory",
+  "CreatedAt": {
+    "$date": "2020-08-18T18:16:27.379Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-08-01T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-08-21T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-18T18:16:27.379Z"
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [],
+  "ObserverActorsIds": [],
+  "GeosIds": [
+    "5f3ab24196464e955096ca87"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-18T18:16:28.547Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "",
+              "CreatedAt": {
+                "$date": "2020-08-18T18:16:27.379Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Cut the grass, level the ground, mark the territory",
+              "GeosIds": "5f3ab24196464e955096ca87",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "",
+              "PlanFinishAt": {
+                "$date": "2020-08-21T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-08-01T10:00:00Z"
+              },
+              "ProjectId": "5f3ab0a596464e955096ca86",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-18T18:16:27.379Z"
+              },
+              "Title": "Prepare the territory for landscaping works"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3c1c328b23bc791a6a29a8"
+  },
+  "IsArchived": false,
+  "Title": "Pass to the hospital",
+  "Description": "Get a pass to the territory",
+  "CreatedAt": {
+    "$date": "2020-08-18T18:21:38.324Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-07-01T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-07-12T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-18T18:21:38.324Z"
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [],
+  "ObserverActorsIds": [],
+  "GeosIds": [
+    "5f3ab2d496464e955096ca88"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-18T18:21:38.424Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "",
+              "CreatedAt": {
+                "$date": "2020-08-18T18:21:38.324Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Get a pass to the territory",
+              "GeosIds": "5f3ab2d496464e955096ca88",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "",
+              "PlanFinishAt": {
+                "$date": "2020-07-12T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-07-01T10:00:00Z"
+              },
+              "ProjectId": "5f3ab0a596464e955096ca86",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-18T18:21:38.324Z"
+              },
+              "Title": "Pass to the hospital"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3c1cc88b23bc791a6a29a9"
+  },
+  "IsArchived": false,
+  "Title": "Check the gas pipeline",
+  "Description": "Check the depth of the gas pipeline location",
+  "CreatedAt": {
+    "$date": "2020-08-18T18:24:08.465Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-07-13T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-07-17T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-18T18:24:08.465Z"
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [],
+  "ObserverActorsIds": [],
+  "GeosIds": [
+    "5f3ab37996464e955096ca89"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-18T18:24:08.551Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "",
+              "CreatedAt": {
+                "$date": "2020-08-18T18:24:08.465Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Check the depth of the gas pipeline location",
+              "GeosIds": "5f3ab37996464e955096ca89",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "",
+              "PlanFinishAt": {
+                "$date": "2020-07-17T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-07-13T10:00:00Z"
+              },
+              "ProjectId": "5f3ab0a596464e955096ca86",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-18T18:24:08.465Z"
+              },
+              "Title": "Check the gas pipeline"
+            }
+          }
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5f3c2f7a8b23bc791a6a29aa"
+  },
+  "IsArchived": false,
+  "Title": "Check the gas pipeline marks",
+  "Description": "Check marks of the gas pipeline location",
+  "CreatedAt": {
+    "$date": "2020-08-18T19:43:53.618Z"
+  },
+  "PlanStartAt": {
+    "$date": "2020-07-13T10:00:00Z"
+  },
+  "PlanFinishAt": {
+    "$date": "2020-07-17T18:59:59.999Z"
+  },
+  "Status": {
+    "Name": "New",
+    "_id": 1
+  },
+  "StatusChangedAt": {
+    "$date": "2020-08-18T19:43:53.618Z"
+  },
+  "ProjectId": "5f3ab0a596464e955096ca86",
+  "CreatedById": "5ee8862e331ac14168f5e99c",
+  "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
+  "AssistentActorsIds": [],
+  "ObserverActorsIds": [],
+  "GeosIds": [
+    "5f3ab37996464e955096ca89"
+  ],
+  "History": [
+    {
+      "_id": null,
+      "Title": null,
+      "Description": null,
+      "ChangedAt": {
+        "$date": "2020-08-18T19:43:54.285Z"
+      },
+      "ChangedBy": {
+        "_id": {
+          "$oid": "5ee8862e331ac14168f5e99c"
+        },
+        "Login": "a.kuskov@bk.ru",
+        "IsArchived": false,
+        "Title": null,
+        "Description": null,
+        "Department": null,
+        "FirstName": "Admin",
+        "LastName": null,
+        "Phone": null,
+        "EMail": "a.kuskov@bk.ru",
+        "Skype": null,
+        "CreatedAt": {
+          "$date": "2020-06-16T08:43:26.287Z"
+        },
+        "CreatedById": null,
+        "Role": {
+          "Name": "Admin",
+          "_id": 1
+        }
+      },
+      "Operations": [
+        {
+          "OperationType": 0,
+          "Path": "/",
+          "OldValue": null,
+          "NewValue": {
+            "_t": "System.Collections.Generic.Dictionary`2[System.String,System.Object]",
+            "_v": {
+              "AssistentActors": "",
+              "CreatedAt": {
+                "$date": "2020-08-18T19:43:53.618Z"
+              },
+              "CreatedBy": "CreatedAt=06/16/2020 08:43:26,Department=,Description=,EMail=a.kuskov@bk.ru,FirstName=Admin,Id=5ee8862e331ac14168f5e99c,IsArchived=False,LastName=,Login=a.kuskov@bk.ru,Phone=,Role=1,Skype=,Title=",
+              "Description": "Check marks of the gas pipeline location",
+              "GeosIds": "5f3ab37996464e955096ca89",
+              "History": "",
+              "Id": null,
+              "IsArchived": false,
+              "ObserverActors": "",
+              "PlanFinishAt": {
+                "$date": "2020-07-17T18:59:59.999Z"
+              },
+              "PlanStartAt": {
+                "$date": "2020-07-13T10:00:00Z"
+              },
+              "ProjectId": "5f3ab0a596464e955096ca86",
+              "ResponsibleActor": "5ee8862e331ac14168f5e99c",
+              "Status": 1,
+              "StatusChangedAt": {
+                "$date": "2020-08-18T19:43:53.618Z"
+              },
+              "Title": "Check the gas pipeline marks"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}]

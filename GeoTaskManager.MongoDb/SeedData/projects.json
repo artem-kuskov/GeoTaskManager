@@ -1,0 +1,118 @@
+[{
+  "_id": {
+    "$oid": "5f3ab03e96464e955096ca84"
+  },
+  "IsArchived": false,
+  "Title": "first project",
+  "Description": "Demo project #1",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:28:46.035Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "ProjectActorRoles": {},
+  "IsMap": false,
+  "MapProvider": "",
+  "MapParameters": {},
+  "ShowMap": false,
+  "Layers": []
+},{
+  "_id": {
+    "$oid": "5f3ab07296464e955096ca85"
+  },
+  "IsArchived": false,
+  "Title": "second project",
+  "Description": "Demo project #2",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:29:38.325Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "ProjectActorRoles": {},
+  "IsMap": false,
+  "MapProvider": "",
+  "MapParameters": {},
+  "ShowMap": false,
+  "Layers": []
+},{
+  "_id": {
+    "$oid": "5f3ab0a596464e955096ca86"
+  },
+  "IsArchived": false,
+  "Title": "third project",
+  "Description": "Demo project #3",
+  "CreatedAt": {
+    "$date": "2020-08-17T16:30:29.179Z"
+  },
+  "CreatedBy": {
+    "_id": {
+      "$oid": "5ee8862e331ac14168f5e99c"
+    },
+    "Login": "a.kuskov@bk.ru",
+    "IsArchived": false,
+    "Title": null,
+    "Description": null,
+    "Department": null,
+    "FirstName": "Admin",
+    "LastName": null,
+    "Phone": null,
+    "EMail": "a.kuskov@bk.ru",
+    "Skype": null,
+    "CreatedAt": {
+      "$date": "2020-06-16T08:43:26.287Z"
+    },
+    "CreatedById": null,
+    "Role": {
+      "Name": "Admin",
+      "_id": 1
+    }
+  },
+  "ProjectActorRoles": {},
+  "IsMap": true,
+  "MapProvider": "GoogleMaps",
+  "MapParameters": {},
+  "ShowMap": true,
+  "Layers": []
+}]
