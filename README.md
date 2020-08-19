@@ -84,7 +84,7 @@ Geos (geospatial) entities contain primitives in GeoJSON specification. They can
 File appsettings.json contains some parameters to configure application.
 
 
-```sh
+```javascript
 {
   "ConnectionStrings": {
 
