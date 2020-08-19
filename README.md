@@ -1,5 +1,6 @@
 # GeoTaskManager
-![Deploy demo to Azure Web App](https://github.com/artem-kuskov/GeoTaskManager/workflows/Deploy%20demo%20to%20Azure%20Web%20App/badge.svg)
+![Build and test](https://github.com/artem-kuskov/GeoTaskManager/workflows/Build%20and%20test/badge.svg)
+![Deploy demo to Azure Web App](https://github.com/artem-kuskov/GeoTaskManager/workflows/Deploy%20demo%20to%20Azure%20Web%20App/badge.svg) 
 
 > Task Management project extended with 2D geospatial coordinates and queries.
 
