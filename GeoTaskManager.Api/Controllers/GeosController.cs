@@ -60,7 +60,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     GET /geos/get/1234567890123456789012345
+        ///     GET /geos/get/5f3ab24196464e955096ca87
         /// </remarks>
         /// <param name="id">Id (required) of the entity</param>
         [HttpGet("{id}")]
@@ -213,7 +213,7 @@ namespace GeoTaskManager.Api.Controllers
         ///         "isArchived": false,
         ///         "title": "My Geo Polygons",
         ///         "description": "Homeland",
-        ///         "projectId": "5f02eda4624d825f2425a87c",
+        ///         "projectId": "5f3ab0a596464e955096ca86",
         ///         "geoJson": "{ \"type\" : \"FeatureCollection\", 
         ///             \"features\" : [{ \"type\" : \"Feature\", 
         ///             \"geometry\" : 
@@ -301,7 +301,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     POST /geos/update/888888888888888888888888
+        ///     POST /geos/update/5f3ab24196464e955096ca87
         ///     {
         ///         "isArchived": true,
         ///         "title": "My New Geo Polygons",
@@ -390,7 +390,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     DELETE /geos/888888888888888888888888?hardMode=true
+        ///     DELETE /geos/5f3ab24196464e955096ca87?hardMode=false
         /// </remarks>
         /// <param name="id">Id of the deleting entity</param>
         /// <param name="hardMode">Use hard mode to delete. 

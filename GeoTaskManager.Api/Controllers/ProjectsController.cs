@@ -59,7 +59,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     GET /projects/get/1234567890123456789012345
+        ///     GET /projects/get/5f3ab0a596464e955096ca86
         /// </remarks>
         /// <param name="id">Id of the entity</param>
         [HttpGet("{id}")]
@@ -190,9 +190,7 @@ namespace GeoTaskManager.Api.Controllers
         ///         "IsArchived": false,
         ///         "ProjectActorRoles":
         ///         {
-        ///             "1234567890123456": 1,
-        ///             "2222222222222222": 2,
-        ///             "3333333333333333": 8,
+        ///             "5ee8862e331ac14168f5e99c": 1
         ///         },
         ///         "IsMap": true,
         ///         "MapProvider": "GoogleMaps",
@@ -208,12 +206,12 @@ namespace GeoTaskManager.Api.Controllers
         ///             {
         ///                 "Order": 1, 
         ///                 "IsHidden": false, 
-        ///                 "GeoId": "4444444444444444"
+        ///                 "GeoId": "5f3ab2d496464e955096ca88"
         ///             },
         ///             {
         ///                 "Order": 2, 
         ///                 "IsHidden": true, 
-        ///                 "GeoId": "5555555555555555"
+        ///                 "GeoId": "5f3ab24196464e955096ca87"
         ///             }
         ///         ]
         ///     }
@@ -274,16 +272,14 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     POST /projects/update/888888888888888888888888
+        ///     POST /projects/update/5f3ab0a596464e955096ca86
         ///     {
         ///         "Title": "New project title",
         ///         "Description": "Detail info",
         ///         "IsArchived": false,
         ///         "ProjectActorRoles":
         ///         {
-        ///             "1234567890123456": 1,
-        ///             "2222222222222222": 2,
-        ///             "3333333333333333": 8,
+        ///             "5ee8862e331ac14168f5e99c": 1
         ///         },
         ///         "IsMap": true,
         ///         "MapProvider": "GoogleMaps",
@@ -299,12 +295,7 @@ namespace GeoTaskManager.Api.Controllers
         ///             {
         ///                 "Order": 1, 
         ///                 "IsHidden": false, 
-        ///                 "GeoId": "4444444444444444"
-        ///             },
-        ///             {
-        ///                 "Order": 2, 
-        ///                 "IsHidden": true, 
-        ///                 "GeoId": "5555555555555555"
+        ///                 "GeoId": "5f3ab37996464e955096ca89"
         ///             }
         ///         ]
         ///     }
@@ -370,7 +361,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     DELETE /projects/888888888888888888888888
+        ///     DELETE /projects/5f3ab0a596464e955096ca86
         /// </remarks>
         /// <param name="id">Id of the deleting entity</param>
         /// <param name="hardMode">Use hard mode to delete. 

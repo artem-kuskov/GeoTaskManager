@@ -45,7 +45,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     GET /actors/get/1234567890123456789012345
+        ///     GET /actors/get/5ee8862e331ac14168f5e99c
         /// </remarks>
         /// <param name="id">Id of the entity</param>
         [HttpGet("{id}")]

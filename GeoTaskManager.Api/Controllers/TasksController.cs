@@ -48,7 +48,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     GET /tasks/get/1234567890123456789012345
+        ///     GET /tasks/get/5f3c1afc8b23bc791a6a29a7
         /// </remarks>
         /// <param name="id">Id of the entity</param>
         [HttpGet("{id}")]
@@ -197,23 +197,20 @@ namespace GeoTaskManager.Api.Controllers
         ///         "Description": "Detail info",
         ///         "PlanStartAt": "2020-05-12T07:10:21.485Z",
         ///         "PlanFinishAt": "2020-05-20T11:12:23Z",
-        ///         "ProjectId": "12345678901345678901234",
-        ///         "ResponsibleActorId": "00000000000000000000000",
+        ///         "ProjectId": "5f3ab0a596464e955096ca86",
+        ///         "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
         ///         "AssistentActorsIds": 
         ///             [
-        ///                 "00000000000000000000000",
-        ///                 "111111111111111111111111",
-        ///                 "222222222222222222222222"
+        ///                 "5ee8862e331ac14168f5e99c"
         ///             ],
         ///         "ObserverActorsIds": 
         ///             [
-        ///                 "00000000000000000000000",
-        ///                 "111111111111111111111111"
+        ///                 "5ee8862e331ac14168f5e99c"
         ///             ],
         ///         "GeosIds": 
         ///             [
-        ///                 "33333333333333333333333",
-        ///                 "444444444444444444444444"
+        ///                 "5f3ab2d496464e955096ca88",
+        ///                 "5f3ab37996464e955096ca89"
         ///             ]
         ///     }
         /// </remarks>
@@ -261,29 +258,24 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     POST /tasks/update/888888888888888888888888
+        ///     POST /tasks/update/5f3c1afc8b23bc791a6a29a7
         ///     {
         ///         "Title": "Updated task title",
         ///         "Description": "Updated Detail info",
         ///         "PlanStartAt": "2020-05-12T07:10:21.485Z",
         ///         "PlanFinishAt": "2020-05-20T07:10:21.485Z",
         ///         "ProjectId": "12345678901345678901234",
-        ///         "ResponsibleActorId": "00000000000000000000000",
+        ///         "ResponsibleActorId": "5ee8862e331ac14168f5e99c",
         ///         "AssistentActorsIds": 
         ///             [
-        ///                 "00000000000000000000000",
-        ///                 "111111111111111111111111",
-        ///                 "222222222222222222222222"
         ///             ],
         ///         "ObserverActorsIds": 
         ///             [
-        ///                 "00000000000000000000000",
-        ///                 "111111111111111111111111"
         ///             ],
         ///         "GeosIds": 
         ///             [
-        ///                 "33333333333333333333333",
-        ///                 "444444444444444444444444"
+        ///                 "5f3ab2d496464e955096ca88",
+        ///                 "5f3ab24196464e955096ca87"
         ///             ],
         ///         "MessageTitle": "The title of change description",
         ///         "MessageDescription": "The details of change description"
@@ -342,12 +334,12 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     PATCH /tasks/888888888888888888888888
+        ///     PATCH /tasks/5f3c1afc8b23bc791a6a29a7
         ///     {
         ///         "Patch": 
         ///             [
         ///                 { "op": "replace", "path": "/Title", "value": "New title" },
-        ///                 { "op": "add", "path": "/AssistentActorsIds", "value": ["66666666666666666666666666"] },
+        ///                 { "op": "add", "path": "/AssistentActorsIds", "value": ["5ee8862e331ac14168f5e99c"] },
         ///                 { "op": "remove", "path": "/Description"}
         ///             ],
         ///         "MessageTitle": "The title of change description",
@@ -422,7 +414,7 @@ namespace GeoTaskManager.Api.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     DELETE /tasks/888888888888888888888888
+        ///     DELETE /tasks/5f3c1afc8b23bc791a6a29a7
         /// </remarks>
         /// <param name="id">Id of the deleting entity</param>
         /// <param name="hardMode">Use hard mode to delete. true - completely delete entity, false - mark entity as archived. Default value is false</param>
