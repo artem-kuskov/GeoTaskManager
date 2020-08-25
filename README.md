@@ -8,7 +8,7 @@ The app, additionally to standard task management features, allows set multiple 
 
 You can try the REST API and OpenAPI (Swagger) specification at [Demo site](https://geotaskmanagerapi20200816172751.azurewebsites.net/swagger/)
 
-(The API uses OAuth2 authorization, and to get demo access, click **Authorize** button at the top of Demo site, insert the line showed below in the form that opens, and then press **Login** to have full rights while working with the API)
+(The API uses OAuth2 authorization, and to get demo access, click **Authorize** button at the top of Demo site, copy the line showed below and paste in the form that opens, and then press **Authorize** to have full rights while working with the API)
 > Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWNrbmFtZSI6ImEua3Vza292IiwibmFtZSI6ImEua3Vza292QGJrLnJ1IiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzZmNjkzMzlhYWJmYjZjMGU5OWUwNDQzNzRjNzRkZTJlP3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGYS5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMC0wOC0xN1QxNDo0MTo0NC41MDVaIiwiZW1haWwiOiJhLmt1c2tvdkBiay5ydSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2dlb3Rhc2ttYW5hZ2VyLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWUxZjVjNzZjYzQzOTAwMTRjMzQ0ZDIiLCJhdWQiOiJZN0ZtOVh5enFVWUkwMlUyNk14SnZNWGdQMGxGODlmSCIsImlhdCI6MTU5NzY3NTMwNCwiZXhwIjoxNjUwMDAwMDAwfQ.R729_qPYrVyGZnL9CjUyyAhsbPnqjOW8B0QZC9_JwG4
 
 ## Architecture
@@ -84,7 +84,7 @@ Geos (geospatial) entities contain primitives in GeoJSON specification. They can
 File appsettings.json contains some parameters to configure application.
 
 
-```sh
+```javascript
 {
   "ConnectionStrings": {
 
