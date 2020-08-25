@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Artem\source\repos\GeoTask\GeoTaskApi\GeoTaskManager.Api.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\Artem\source\repos\GeoTaskManager\GeoTaskManager.Api\GeoTaskManager.Api.xml</DocumentationFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Artem\source\repos\GeoTaskManager\GeoTaskManager.Api\GeoTaskManager.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

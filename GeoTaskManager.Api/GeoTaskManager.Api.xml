@@ -4,9 +4,713 @@
         <name>GeoTaskManager.Api</name>
     </assembly>
     <members>
+        <member name="T:GeoTaskManager.Api.Actors.Models.ApiActor">
+            <summary>
+            API Actor entity model
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Id">
+            <summary>
+            Id of the entity
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Login">
+            <summary>
+            User login
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.IsArchived">
+            <summary>
+            Soft delete attribute:
+                true - the entity is archived,
+                false - not archived.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Title">
+            <summary>
+            Actor's title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Description">
+            <summary>
+            Actor's description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Department">
+            <summary>
+            Actor's department
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.FirstName">
+            <summary>
+            Actor's first name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.LastName">
+            <summary>
+            Actor's last name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Phone">
+            <summary>
+            Contact phone
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.EMail">
+            <summary>
+            Contact e-mail
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Skype">
+            <summary>
+            Contact Skype
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.CreatedAt">
+            <summary>
+            Entity creation date and time in UTC format
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActor.Role">
+            <summary>
+            Actor's global role
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Actors.Models.ApiActorListQuery">
+            <summary>
+            Request for the list of Actor entities according applying filters.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorListQuery.Offset">
+            <summary>
+            Offset for pagination of the list.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorListQuery.Limit">
+            <summary>
+            Limit the list length for pagination.
+            API has self limits and when Limit exceeds API limits
+            the value will be decreased.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorListQuery.Archived">
+            <summary>
+            Filter to include archived entities:
+                'true' - return only archived,
+                'false' - return only not archived,
+                 null - return any entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorListQuery.ActorRoleMask">
+            <summary>
+            Limit by Actor global role:
+                0 - any role,
+                1 - Admin,
+                2 - Manager,
+                4 - Actor,
+                8 - Observer,
+                or sum of several possible roles.
+                Example: 6 for Manager or Actor role
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorListQuery.ContainsKeyWords">
+            <summary>
+            Returns entities containing one 
+            or several words from the parameter in the Title, Description, 
+            FirstName, LastName, Department, Login
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand">
+            <summary>
+            Command to create Actor entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Login">
+            <summary>
+            User login
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.IsArchived">
+            <summary>
+            Soft delete attribute:
+                true - the entity is archived,
+                false - not archived.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Title">
+            <summary>
+            Actor's title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Description">
+            <summary>
+            Actor's description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Department">
+            <summary>
+            Actor's department
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.FirstName">
+            <summary>
+            Actor's first name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.LastName">
+            <summary>
+            Actor's last name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Phone">
+            <summary>
+            Contact phone
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.EMail">
+            <summary>
+            Contact e-mail
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Skype">
+            <summary>
+            Contact Skype
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand.Role">
+            <summary>
+            Actor's global role
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand">
+            <summary>
+            Command to update exist Actor entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Login">
+            <summary>
+            User login
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.IsArchived">
+            <summary>
+            Soft delete attribute:
+                true - the entity is archived,
+                false - not archived.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Title">
+            <summary>
+            Actor's title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Description">
+            <summary>
+            Actor's description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Department">
+            <summary>
+            Actor's department
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.FirstName">
+            <summary>
+            Actor's first name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.LastName">
+            <summary>
+            Actor's last name
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Phone">
+            <summary>
+            Contact phone
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.EMail">
+            <summary>
+            Contact e-mail
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Skype">
+            <summary>
+            Contact Skype
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand.Role">
+            <summary>
+            Actor's global role
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Controllers.ActorsController">
+            <summary>
+            Actors controller
+            </summary>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.#ctor(MediatR.IMediator,Microsoft.Extensions.Logging.ILogger{GeoTaskManager.Api.Controllers.ActorsController})">
+            <summary>
+            Actors API controller
+            </summary>
+            <param name="mediator">IMediator class instance</param>
+            <param name="logger">ILogger class instance</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.Get(System.String)">
+            <summary>
+            Get specific Actor
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /actors/get/1234567890123456789012345
+            </remarks>
+            <param name="id">Id of the entity</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.Get(GeoTaskManager.Api.Actors.Models.ApiActorListQuery)">
+            <summary>
+            Gets filtered list of Actors
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /actors/get?[parameters]
+            
+            <param name="request">
+            Available parameters:
+            
+            Offset (integer) - number of skipping element from the beginning of list
+            
+            Limit (integer) - maximum number of returning elements. It could be limited by API service
+            
+            Archived (bool) - true returns only archived entities, false - only not archived entities, null - both archived and not archived entities
+            
+            ActorRoleMask (integer) - filter entities by Actor's global role.
+            
+                0 - any role;
+                1 - Admin;
+                2 - Manager;
+                4 - Actor;
+                8 - Observer;
+                or sum of several possible roles, for example, 6 for Manager or Actor role
+                
+            ContainsKeyWords (string) - returns entities containing one 
+                or several words from the parameter in the Title, Description, 
+                FirstName, LastName, Department, Login
+            </param>
+            </remarks>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.Create(GeoTaskManager.Api.Actors.Models.ApiActorCreateCommand)">
+            <summary>
+            Add new Actor object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /actors/create
+                {
+                    "Login": "Login identity from authentication service",
+                    "Title": "Title",
+                    "IsArchived": false,
+                    "Description": "description",
+                    "Department": "department",
+                    "FirstName": "First Name",
+                    "LastName": "Last Name",
+                    "Phone": "+71112223344",
+                    "Email": "user@example.com",
+                    "Skype": "artimon77",
+                    "Role": 1
+                }
+            </remarks>
+            <param name="actor">New entity</param>
+            <returns>Id (string) of created entity</returns>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.Update(System.String,GeoTaskManager.Api.Actors.Models.ApiActorUpdateCommand)">
+            <summary>
+            Update Actor
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /actors/update/888888888888888888888888
+                {
+                    "Login": "Login identity from authentication service",
+                    "Title": "Title",
+                    "IsArchived": false,
+                    "Description": "description",
+                    "Department": "department",
+                    "FirstName": "First Name",
+                    "LastName": "Last Name",
+                    "Phone": "+71112223344",
+                    "Email": "user@example.com",
+                    "Skype": "artimon77",
+                    "Role": 1
+                }
+            </remarks>
+            <param name="id">Id of the entity</param>
+            <param name="actor">Updated Actor object</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ActorsController.Delete(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Delete Actor
+            </summary>
+            <remarks>
+            Sample request:
+            
+                DELETE /actors/888888888888888888888888
+            </remarks>
+            <param name="id">Id of the deleting entity</param>
+            <param name="hardMode">Use hard mode to delete. true - completely delete entity, false - mark entity as archived. Default value is false</param>
+            <param name="commitTitle">Title of the message adding to the history when delete in soft mode</param>
+            <param name="commitDescription">Message adding to the history when delete in soft mode</param>
+        </member>
+        <member name="T:GeoTaskManager.Api.Controllers.GeosController">
+            <summary>
+            Geospatial (geo) entities controller
+            </summary>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.#ctor(MediatR.IMediator,Microsoft.Extensions.Logging.ILogger{GeoTaskManager.Api.Controllers.GeosController})">
+            <summary>
+            Geo API controller
+            </summary>
+            <param name="mediator">IMediator class instance</param>
+            <param name="logger">ILogger class instance</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.Get(System.String)">
+            <summary>
+            Get specific Geo
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /geos/get/1234567890123456789012345
+            </remarks>
+            <param name="id">Id (required) of the entity</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.Get(GeoTaskManager.Api.Geos.Models.ApiGeoListQuery)">
+             <summary>
+             Gets filtered list of Geos
+             </summary>
+             <remarks>
+             Sample request:
+             
+                 GET /geos/get?[parameters]
+             
+             <param name="request">
+             Available parameters:
+             
+             Offset (integer) - number of skipping element 
+             from the beginning of list
+             
+             Limit (integer) - maximum number of returning elements. 
+             It could be limited by API service
+             
+             Archived (boolean) - true returns only archived entities, 
+             false - only not archived entities, 
+             null - both archived and not archived entities
+             
+             ProjectId (string) - Id of the project, containing Geos, 
+             {id} - only entities from specified project, 
+             null - entities from any project
+             
+             DistanceLong (double) - set maximum distance (in meters) 
+             to the entities from the CenterLong along Longitude coordinate 
+             (a half of wide of the limit box with the center 
+             in CenterLong, CenterLat), 
+             {number} - distance in meters, 
+             0 - Geo spatial filter is not applied
+            
+             DistanceLat (double) - set maximum distance (in meters) 
+             to the entities from the CenterLat along Latitude coordinate 
+             (a half of height of the limit box with the center 
+             in CenterLong, CenterLat), 
+             {number} - distance in meters, 
+             0 - Geo spatial filter is not applied
+             
+             CenterLong (double) - longitude of the limit box center coordinate,
+             from which DistanceLong is counted (values from -180 to 180).
+             
+             CenterLat (double) - latitude of the limit box center coordinate,
+             from which DistanceLat is counted (values from -90 to 90).
+             
+             ContainsKeyWords (string) - returns entities 
+             containing one or several words from the parameter 
+             in the Title or/and Description
+             </param>
+             </remarks>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.Create(GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand)">
+            <summary>
+            Add new Geo object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /geos/create
+                {
+                    "isArchived": false,
+                    "title": "My Geo Polygons",
+                    "description": "Homeland",
+                    "projectId": "5f02eda4624d825f2425a87c",
+                    "geoJson": "{ \"type\" : \"FeatureCollection\", 
+                        \"features\" : [{ \"type\" : \"Feature\", 
+                        \"geometry\" : 
+                        { \"type\" : \"Polygon\", 
+                        \"coordinates\" : 
+                            [[[37.88935661315918, 55.700275346622817], 
+                            [37.88884162902832, 55.69800200857496], 
+                            [37.891416549682617, 55.697518302569328], 
+                            [37.893905639648438, 55.699017771703225], 
+                            [37.88935661315918, 55.700275346622817]]] }, 
+                            \"properties\" : { } }, 
+                        { \"type\" : \"Feature\", 
+                        \"geometry\" : 
+                        { \"type\" : \"Polygon\", 
+                        \"coordinates\" : 
+                            [[[37.888647372040346, 55.697333455403793], 
+                            [37.889465039458663, 55.697333455403793], 
+                            [37.889465039458663, 55.697872447701002], 
+                            [37.888647372040346, 55.697872447701002], 
+                            [37.888647372040346, 55.697333455403793]]] }, 
+                        \"properties\" : { } }, 
+                        { \"type\" : \"Feature\", 
+                        \"geometry\" : 
+                        { \"type\" : \"Point\", 
+                        \"coordinates\" : 
+                            [37.895793914794915, 55.696998311937186] },
+                        \"properties\" : { } }] }"
+                }
+            </remarks>
+            <param name="command">New entity 
+            (geoJson contains serialized string of 
+            GeoJson FeatureCollection value)</param>
+            <returns>Id (string) of created entity</returns>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.Update(System.String,GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand)">
+            <summary>
+            Update Geo object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /geos/update/888888888888888888888888
+                {
+                    "isArchived": true,
+                    "title": "My New Geo Polygons",
+                    "description": "Homeland",
+                    "geoJson": "{
+                        \"type\" : \"FeatureCollection\", 
+                        \"features\" : 
+                        [
+                            {
+                                \"type\" : \"Feature\", 
+                                \"geometry\" : 
+                                { 
+                                    \"type\" : \"Polygon\", 
+                                    \"coordinates\" : 
+                                    [[[37.88935661315918, 55.700275346622817], 
+                                    [37.88884162902832, 55.69800200857496], 
+                                    [37.891416549682617, 55.697518302569328], 
+                                    [37.893905639648438, 55.699017771703225], 
+                                    [37.88935661315918, 55.700275346622817]]] 
+                                }, 
+                                \"properties\" : { } 
+                            }
+                        ]
+                    }"
+                }
+            </remarks>
+            <param name="id">Id of the entity</param>
+            <param name="command">Update Geo command (geoJson contains 
+            serialized string of GeoJson FeatureCollection value)</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.GeosController.Delete(System.String,System.Boolean)">
+            <summary>
+            Delete Geo object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                DELETE /geos/888888888888888888888888?hardMode=true
+            </remarks>
+            <param name="id">Id of the deleting entity</param>
+            <param name="hardMode">Use hard mode to delete. 
+            true - completely delete entity. 
+            Also remove links to that Geo entity in GeoTask and Project entities.
+            false (default) - mark entity as archived. 
+            </param>
+        </member>
+        <member name="T:GeoTaskManager.Api.Controllers.ProjectsController">
+            <summary>
+            Projects controller
+            </summary>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.#ctor(MediatR.IMediator,Microsoft.Extensions.Logging.ILogger{GeoTaskManager.Api.Controllers.ProjectsController})">
+            <summary>
+            Project API controller
+            </summary>
+            <param name="mediator">IMediator class instance</param>
+            <param name="logger">ILogger class instance</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.Get(System.String)">
+            <summary>
+            Get specific Project
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /projects/get/1234567890123456789012345
+            </remarks>
+            <param name="id">Id of the entity</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.Get(GeoTaskManager.Api.Projects.Models.ApiProjectListQuery)">
+            <summary>
+            Gets filtered list of Projects
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /projects/get?[parameters]
+            
+            <param name="request">
+            Available parameters:
+            
+            Offset (integer) - number of skipping element 
+            from the beginning of list
+            
+            Limit (integer) - maximum number of returning elements. 
+            It could be limited by API service
+            
+            Archived (boolean) - true returns only archived entities, 
+            false - only not archived entities, 
+            null - both archived and not archived entities
+            
+            ContainsKeyWords (string) - returns entities 
+            containing one or several words from the parameter 
+            in the Title or/and Description
+            </param>
+            </remarks>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.Create(GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand)">
+            <summary>
+            Add new Project object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /projects/create
+                {
+                    "Title": "New project title",
+                    "Description": "Detail info",
+                    "IsArchived": false,
+                    "ProjectActorRoles":
+                    {
+                        "1234567890123456": 1,
+                        "2222222222222222": 2,
+                        "3333333333333333": 8,
+                    },
+                    "IsMap": true,
+                    "MapProvider": "GoogleMaps",
+                    "MapParameters":
+                    {
+                        "Layer": "BaseLayer",
+                        "ShowRuler": false,
+                        "Zoom": 4,
+                    },
+                    "ShowMap": true,
+                    "Layers":
+                    [
+                        {
+                            "Order": 1, 
+                            "IsHidden": false, 
+                            "GeoId": "4444444444444444"
+                        },
+                        {
+                            "Order": 2, 
+                            "IsHidden": true, 
+                            "GeoId": "5555555555555555"
+                        }
+                    ]
+                }
+            </remarks>
+            <param name="command">New entity</param>
+            <returns>Id (string) of created entity</returns>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.Update(System.String,GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand)">
+            <summary>
+            Update Project object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /projects/update/888888888888888888888888
+                {
+                    "Title": "New project title",
+                    "Description": "Detail info",
+                    "IsArchived": false,
+                    "ProjectActorRoles":
+                    {
+                        "1234567890123456": 1,
+                        "2222222222222222": 2,
+                        "3333333333333333": 8,
+                    },
+                    "IsMap": true,
+                    "MapProvider": "GoogleMaps",
+                    "MapParameters":
+                    {
+                        "Layer": "BaseLayer",
+                        "ShowRuler": false,
+                        "Zoom": 4,
+                    },
+                    "ShowMap": true,
+                    "Layers":
+                    [
+                        {
+                            "Order": 1, 
+                            "IsHidden": false, 
+                            "GeoId": "4444444444444444"
+                        },
+                        {
+                            "Order": 2, 
+                            "IsHidden": true, 
+                            "GeoId": "5555555555555555"
+                        }
+                    ]
+                }
+            </remarks>
+            <param name="id">Id of the entity</param>
+            <param name="command">Update Project command</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.ProjectsController.Delete(System.String,System.Boolean)">
+            <summary>
+            Delete Project object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                DELETE /projects/888888888888888888888888
+            </remarks>
+            <param name="id">Id of the deleting entity</param>
+            <param name="hardMode">Use hard mode to delete. 
+            true - completely delete entity, 
+            false (default) - mark entity as archived. 
+            </param>
+        </member>
+        <member name="T:GeoTaskManager.Api.Controllers.TasksController">
+            <summary>
+            Geo Tasks controller
+            </summary>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.#ctor(MediatR.IMediator,Microsoft.Extensions.Logging.ILogger{GeoTaskManager.Api.Controllers.TasksController})">
+            <summary>
+            GeoTask API controller
+            </summary>
+            <param name="mediator">IMediator class instance</param>
+            <param name="logger">ILogger class instance</param>
+        </member>
         <member name="M:GeoTaskManager.Api.Controllers.TasksController.Get(System.String)">
             <summary>
-            Gets specific Geo Task
+            Get specific Geo Task
             </summary>
             <remarks>
             Sample request:
@@ -15,7 +719,7 @@
             </remarks>
             <param name="id">Id of the entity</param>
         </member>
-        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Get(GeoTaskManager.Api.Models.ApiGetTaskAllRequest)">
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Get(GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery)">
              <summary>
              Gets filtered list of Geo Tasks
              </summary>
@@ -27,11 +731,11 @@
              <param name="request">
              Available parameters:
              
-             Offset (integer) - number of skipping element from the begining of list
+             Offset (integer) - number of skipping element from the beginning of list
              
              Limit (integer) - maximum number of returning elements. It could be limited by API service
              
-             Archived (bool) - true returns only archived entities, false - only not archived entities, null - both archived and not archived entities
+             Archived (boolean) - true returns only archived entities, false - only not archived entities, null - both archived and not archived entities
              
              ProjectId (string) - filter entities by project with this Id
              
@@ -55,7 +759,7 @@
                  8 - finished;
                  16 - cancel requested;
                  32 - canceled;
-                 or sum of several possible statuses, ex. 48 for canceled or requsted for cancelization Geo Tasks
+                 or sum of several possible statuses, ex. 48 for canceled or requested for cancellation Geo Tasks
                  
              MaxTimeToDeadline (string) - maximum time lag from current time to planned finish time. It can be negative time.
                  Example: 
@@ -64,10 +768,12 @@
                      "-6.20:20:10" returns Geo Tasks where the planned finish time was 6 days 20 hours 20 minutes and 10 seconds ago
                      
              ContainsKeyWords (string) - returns entities containing one or several words from the parameter in the Title or/and Description
+             
+             GeoId (string) - Filter by Id of the Geospatial entity, the GeoTask is linked to. 
              </param>
              </remarks>
         </member>
-        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Create(GeoTaskManager.Api.Models.ApiTaskCreateModel)">
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Create(GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand)">
             <summary>
             Add new Geo Task object
             </summary>
@@ -101,28 +807,9 @@
                 }
             </remarks>
             <param name="task">New entity</param>
-            <returns>GeoTask object</returns>
+            <returns>Id (string) of created entity</returns>
         </member>
-        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Patch(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{GeoTaskManager.Application.GeoTasks.Models.AppGeoTaskPatchModel})">
-            <summary>
-            Patch Geo Task object
-            </summary>
-            <remarks>
-            Sample request:
-            
-                PATCH /tasks/888888888888888888888888
-                {
-                    [
-                        { "op": "replace", "path": "/Title", "value": "New title" },
-                        { "op": "add", "path": "/AssistentActorsIds", "value": ["66666666666666666666666666"] },
-                        { "op": "remove", "path": "/Description"}
-                    ]
-                }
-            </remarks>
-            <param name="id">Id of patching Geo Task object</param>
-            <param name="patch">patch command for Geo Task object</param>
-        </member>
-        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Update(System.String,GeoTaskManager.Api.Models.ApiTaskUpdateModel)">
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Update(System.String,GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand)">
             <summary>
             Update Geo Task object
             </summary>
@@ -152,13 +839,37 @@
                         [
                             "33333333333333333333333",
                             "444444444444444444444444"
-                        ]
+                        ],
+                    "MessageTitle": "The title of change description",
+                    "MessageDescription": "The details of change description"
                 }
             </remarks>
             <param name="id">Id of the entity</param>
             <param name="task">Updated Geo Task object</param>
         </member>
-        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Delete(System.String)">
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Patch(System.String,GeoTaskManager.Api.Core.Commands.ApiPatchCommand{GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask})">
+            <summary>
+            Patch Geo Task object
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PATCH /tasks/888888888888888888888888
+                {
+                    "Patch": 
+                        [
+                            { "op": "replace", "path": "/Title", "value": "New title" },
+                            { "op": "add", "path": "/AssistentActorsIds", "value": ["66666666666666666666666666"] },
+                            { "op": "remove", "path": "/Description"}
+                        ],
+                    "MessageTitle": "The title of change description",
+                    "MessageDescription": "The details of change description"
+                }
+            </remarks>
+            <param name="id">Id of patching Geo Task object</param>
+            <param name="patch">patch command for Geo Task object</param>
+        </member>
+        <member name="M:GeoTaskManager.Api.Controllers.TasksController.Delete(System.String,System.Boolean,System.String,System.String)">
             <summary>
             Delete Geo Task object
             </summary>
@@ -168,6 +879,795 @@
                 DELETE /tasks/888888888888888888888888
             </remarks>
             <param name="id">Id of the deleting entity</param>
+            <param name="hardMode">Use hard mode to delete. true - completely delete entity, false - mark entity as archived. Default value is false</param>
+            <param name="commitTitle">Title of the message adding to the history when delete in soft mode</param>
+            <param name="commitDescription">Message adding to the history when delete in soft mode</param>
+        </member>
+        <member name="T:GeoTaskManager.Api.Core.Commands.ApiPatchCommand`1">
+            <summary>
+            API command to patch entity.
+            </summary>
+            <typeparam name="TEntity">Type of patching entity</typeparam>
+        </member>
+        <member name="P:GeoTaskManager.Api.Core.Commands.ApiPatchCommand`1.Patch">
+            <summary>
+            Patch object with operations for entity
+            <seealso>
+                <a href="https://tools.ietf.org/html/rfc6902">RFC6902</a>
+            </seealso>
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Core.Commands.ApiPatchCommand`1.MessageTitle">
+            <summary>
+            Commit title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Core.Commands.ApiPatchCommand`1.MessageDescription">
+            <summary>
+            Commit description
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Core.Models.ApiList`1">
+            <summary>
+            Response for the list of TEntity entities
+            </summary>
+            <typeparam name="TEntity">The type of the entities</typeparam>
+        </member>
+        <member name="P:GeoTaskManager.Api.Core.Models.ApiList`1.Entities">
+            <summary>
+            List of the entities
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Core.Models.ApiList`1.TotalCount">
+            <summary>
+            Total count of requested entities when pagination is not applied.
+            For example: if repository has 100 of requested entities,
+            but response limited by 20 entities, TotalCount will be 100.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Geos.Models.ApiGeo">
+            <summary>
+            Geo API model
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.Id">
+            <summary>
+            Id of the entity
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.CreatedAt">
+            <summary>
+            Date and time of entity creation in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.CreatedBy">
+            <summary>
+            Actor, the entity created by.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.ProjectId">
+            <summary>
+            Id of the Project, the Geo is linked to
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeo.GeoJson">
+            <summary>
+            Serialized to string GeoJSON object
+            (https://tools.ietf.org/html/rfc7946), 
+            showing the position or area of Geo object
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand">
+            <summary>
+            API command to create Geo entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand.ProjectId">
+            <summary>
+            Id of the Project, the Geo is linked to
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoCreateCommand.GeoJson">
+            <summary>
+            Serialized to string GeoJSON object
+            (https://tools.ietf.org/html/rfc7946), 
+            showing the position or area of Geo object
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery">
+            <summary>
+            Request for the list of Project entities according applying filters.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.Offset">
+            <summary>
+            Offset for pagination of the list.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.Limit">
+            <summary>
+            Limit the list length for pagination.
+            API has self limits and when Limit exceeds API limits
+            the value will be decreased.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.Archived">
+            <summary>
+            Filter to include soft deleted entities:
+                'true' - return only soft deleted,
+                'false' - return only not soft deleted,
+                 null - return any entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.ProjectId">
+            <summary>
+            Filter Geos by specific Project they linked to
+            {id} - Id of the Project,
+            null - filter is not applied
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.DistanceLong">
+            DistanceLong (double) - set maximum distance (in meters) 
+            to the entities from the CenterLong along Longitude coordinate 
+            (a half of wide of the limit box with the center 
+            in CenterLong, CenterLat), 
+            {number} - distance in meters, 
+            0 - Geo spatial filter is not applied
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.DistanceLat">
+            DistanceLat (double) - set maximum distance (in meters) 
+            to the entities from the CenterLat along Latitude coordinate 
+            (a half of height of the limit box with the center 
+            in CenterLong, CenterLat), 
+            {number} - distance in meters, 
+            0 - Geo spatial filter is not applied
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.CenterLong">
+            CenterLong (double) - longitude of the limit box center coordinate,
+            from which DistanceLong is counted (values from -180 to 180).
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.CenterLat">
+            CenterLat (double) - latitude of the limit box center coordinate,
+            from which DistanceLat is counted (values from -90 to 90).
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoListQuery.ContainsKeyWords">
+            <summary>
+            Text filter for entities containing one or several words
+            in the Title or/and Description of Project.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand">
+            <summary>
+            Update Project entity command
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Geos.Models.ApiGeoUpdateCommand.GeoJson">
+            <summary>
+            Serialized to string GeoJSON object
+            (https://tools.ietf.org/html/rfc7946), 
+            showing the position or area of Geo object
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask">
+            <summary>
+            GeoTask API model
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.Id">
+            <summary>
+            Id of the entity
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.Title">
+            <summary>
+            GeoTask title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.CreatedAt">
+            <summary>
+            Date and time of GeoTask creation in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.PlanStartAt">
+            <summary>
+            Plan date and time of GeoTask start in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.PlanFinishAt">
+            <summary>
+            Plan date and time of GeoTask finish in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.Status">
+            <summary>
+            GeoTask status.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.StatusChangedAt">
+            <summary>
+            Date and time of last status change in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.ProjectId">
+            <summary>
+            Id of the Project, GeoTask connected to.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.CreatedBy">
+            <summary>
+            Actor, the GeoTask created by.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.ResponsibleActor">
+            <summary>
+            Actor responsible for GeoTask's result.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.AssistentActors">
+            <summary>
+            Assistant actors
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.ObserverActors">
+            <summary>
+            Actors those observe the process of GeoTask execution 
+            but do not participate in it.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.GeosIds">
+            <summary>
+            Ids of Geo entities connected to GeoTask.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTask.History">
+            <summary>
+            The history of GeoTask changes.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand">
+            <summary>
+            Command to create GeoTask entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.Title">
+            <summary>
+            The title of GeoTask
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.Description">
+            <summary>
+            Detail description of th GeoTask.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.PlanStartAt">
+            <summary>
+            Date and time in UTC format for planning start time.
+            If 'null' then there is no planning date.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.PlanFinishAt">
+            <summary>
+            Date and time in UTC format for planning finish time.
+            If 'null' then there is no planning date.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.ProjectId">
+            <summary>
+            Id of the Project entity that GeoTask connecting to.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.ResponsibleActorId">
+            <summary>
+            Id of the Actor entity that has responsibility for GeoTask result.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.AssistentActorsIds">
+            <summary>
+            List of Ids of the Actors those play assistant role 
+            and help to responsible actor.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.ObserverActorsIds">
+            <summary>
+            List of Ids of the Actors entities 
+            those do not participate in GeoTask execution, 
+            but can observe the process.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskCreateCommand.GeosIds">
+            <summary>
+            List of Ids of the Geo entities where GeoTask must be executed.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory">
+            <summary>
+            GeoTask history of changes API model.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory.Id">
+            <summary>
+            Id of the entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory.Title">
+            <summary>
+            The title of the change commit.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory.Description">
+            <summary>
+            The description of the change commit.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory.CreatedAt">
+            <summary>
+            Date and time of change commit in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskHistory.CreatedBy">
+            <summary>
+            Actor performed the change.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery">
+            <summary>
+            Request for the list of GeoTask entities according applying filters.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.Offset">
+            <summary>
+            Offset for pagination of the list.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.Limit">
+            <summary>
+            Limit the list length for pagination.
+            API has self limits and when Limit exceeds API limits
+            the value will be decreased.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.Archived">
+            <summary>
+            Filter to include archived entities:
+                'true' - return only archived,
+                'false' - return only not archived,
+                 null - return any entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.ProjectId">
+            <summary>
+            Filter to include only entities connected to specific Project:
+                Id of specific Project entity,
+                null for all entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.ActorId">
+            <summary>
+            Filter for specific Actor participated in GeoTask:
+                Id of the Actor,
+                null for any entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.ActorRoleMask">
+            <summary>
+            Limit by ActorId's role in the GeoTask:
+                0 - any role,
+                1 - Creator,
+                2 - Responsible,
+                4 - Assistant,
+                8 - Observer,
+                or sum of several possible roles.
+                Example: 6 for responsible or assistant role
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.TaskStatusMask">
+            <summary>
+            Limit GeoTask status:
+                0 - any status;
+                1 - New;
+                2 - In Work;
+                4 - Finish requested;
+                8 - Finished;
+                16 - Cancel requested;
+                32 - Canceled;
+                or sum of several possible statuses.
+                Example: 48 for canceled or requested for cancellation 
+                         Geo Tasks.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.MaxTimeToDeadLine">
+            <summary>
+            Maximum time lag from current time in UTC format 
+            to planned finish time in UTC format. It can be negative time.
+                Example: 
+                    "6.20:20:10" returns Geo Tasks 
+                        where the planned finish time was in the past 
+                        or will be in the next 6 days 20 hours 20 minutes
+                        and 10 seconds
+                    "-6.20:20:10" returns Geo Tasks 
+                    where the planned finish time was 6 days 20 hours 
+                    20 minutes and 10 seconds ago
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.ContainsKeyWords">
+            <summary>
+            Text filter for entities containing one or several words
+            in the Title or/and Description of GeoTask.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskListQuery.GeoId">
+            <summary>
+            The Id of Geospatial entity, the GeoTask is linked to.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand">
+            <summary>
+            Update GeoTask entity command
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.Title">
+            <summary>
+            The title of GeoTask
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.Description">
+            <summary>
+            Detail description of the GeoTask.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.PlanStartAt">
+            <summary>
+            Date and time in UTC format for planning start time.
+            If 'null' then there is no planning date.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.PlanFinishAt">
+            <summary>
+            Date and time in UTC format for planning finish time.
+            If 'null' then there is no planning date.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.ProjectId">
+            <summary>
+            Id of the Project entity that GeoTask connecting to.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.ResponsibleActorId">
+            <summary>
+            Id of the Actor entity that has responsibility for GeoTask result.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.AssistentActorsIds">
+            <summary>
+            List of Ids of the Actors those play assistant role 
+            and help to responsible actor.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.ObserverActorsIds">
+            <summary>
+            List of Ids of the Actors entities 
+            those do not participate in GeoTask execution, 
+            but can observe the process.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.GeosIds">
+            <summary>
+            List of Ids of the Geo entities where GeoTask must be executed.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.IsArchived">
+            <summary>
+            Soft delete attribute:
+                true - entity is archived,
+                false - entity is not archived.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.Status">
+            GeoTask status:
+                1 - New,
+                2 - In Work,
+                4 - Finish requested,
+                8 - Finished,
+                16 - Cancel requested,
+                32 - Canceled.
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.MessageTitle">
+            <summary>
+            Commit changes message title.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.GeoTasks.Models.ApiGeoTaskUpdateCommand.MessageDescriprion">
+            <summary>
+            Commit changes message description.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Projects.Models.ApiProject">
+            <summary>
+            Project API model
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.Id">
+            <summary>
+            Id of the entity
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.CreatedAt">
+            <summary>
+            Date and time of entity creation in UTC format.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.CreatedBy">
+            <summary>
+            Actor, the entity created by.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.ProjectActorRoles">
+            <summary>
+            Project roles for actors. 
+            They are used to level up actor's global role
+            in a specific project.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.IsMap">
+            <summary>
+            Indicate that the project's tasks are linked to geographic map
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.MapProvider">
+            <summary>
+            Name of map provider. It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.MapParameters">
+            <summary>
+            Dictionary of the map visualization parameters. 
+            It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.ShowMap">
+            <summary>
+            Show or hide map layer at the front-end.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProject.Layers">
+            <summary>
+            Overlay image layers showed as background for the project's tasks.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand">
+            <summary>
+            API command to create Project entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.ProjectActorRoles">
+            <summary>
+            Project roles for actors. 
+            They are used to level up actor's global role
+            in a specific project.
+            It is a dictionary where the key is the Id of the actor 
+            and the value is the Id of the role.
+            There are the next roles:
+            1: Admin;
+            2: Manager;
+            4: Actor;
+            8: Observer.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.IsMap">
+            <summary>
+            Indicate that the project's tasks are linked to geographic map
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.MapProvider">
+            <summary>
+            Name of map provider. It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.MapParameters">
+            <summary>
+            Dictionary of the map visualization parameters. 
+            It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.ShowMap">
+            <summary>
+            Show or hide map layer at the front-end.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectCreateCommand.Layers">
+            <summary>
+            Overlay image layers showed as background for the project's tasks.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Projects.Models.ApiProjectListQuery">
+            <summary>
+            Request for the list of Project entities according applying filters.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectListQuery.Offset">
+            <summary>
+            Offset for pagination of the list.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectListQuery.Limit">
+            <summary>
+            Limit the list length for pagination.
+            API has self limits and when Limit exceeds API limits
+            the value will be decreased.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectListQuery.Archived">
+            <summary>
+            Filter to include soft deleted entities:
+                'true' - return only soft deleted,
+                'false' - return only not soft deleted,
+                 null - return any entities.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectListQuery.ContainsKeyWords">
+            <summary>
+            Text filter for entities containing one or several words
+            in the Title or/and Description of Project.
+            </summary>
+        </member>
+        <member name="T:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand">
+            <summary>
+            Update Project entity command
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.IsArchived">
+            <summary>
+            Soft delete attribute.
+                true - archived entity,
+                false - not archived entity.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.ProjectActorRoles">
+            <summary>
+            Project roles for actors. 
+            They are used to level up actor's global role
+            in a specific project.
+            It is a dictionary where the key is the Id of the actor 
+            and the value is the Id of the role.
+            There are the next roles:
+            1: Admin;
+            2: Manager;
+            4: Actor;
+            8: Observer.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.IsMap">
+            <summary>
+            Indicate that the project's tasks are linked to geographic map
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.MapProvider">
+            <summary>
+            Name of map provider. It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.MapParameters">
+            <summary>
+            Dictionary of the map visualization parameters. 
+            It is used by front-end to show the map.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.ShowMap">
+            <summary>
+            Show or hide map layer at the front-end.
+            </summary>
+        </member>
+        <member name="P:GeoTaskManager.Api.Projects.Models.ApiProjectUpdateCommand.Layers">
+            <summary>
+            Overlay image layers showed as background for the project's tasks.
+            </summary>
         </member>
     </members>
 </doc>
